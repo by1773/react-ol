@@ -28,19 +28,14 @@ module.exports = {
       // redirect:"/map/map1",
       routes: [
         { path: '/map/map1', component: './main/index.js' },
+        // 地图空间
+        { path: '/mapControl/navControl', component: './mapControl/navControl.js' },
+        // 地图操作
+        { path: '/mapOperation/mapOperation', component: './mapOperation/mapOperation.js' },
       ],
+    
      
-    },
-    // {
-    //   path:'/map',
-    //   component:'./main/test.js',
-  
-    // },
-    // {
-    //   path:'/test',
-    //   component:'./main/test2.js',
-    // },
-  
+    }
     
    
   ]

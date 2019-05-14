@@ -17,7 +17,6 @@ class SiderDemo extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <Layout style={{ height: '100%' }}>
         <Header className="header">
@@ -39,9 +38,9 @@ class SiderDemo extends Component {
               verticalAlign: '7px',
             }}
           >
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
+            <Menu.Item key="top1">nav 1</Menu.Item>
+            <Menu.Item key="top2">nav 2</Menu.Item>
+            <Menu.Item key="top3">nav 3</Menu.Item>
           </Menu>
         </Header>
         <Layout style={{ height: '100%' }}>
@@ -71,13 +70,20 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="1">
-                  <Link to="/map/map1" />option1
+                <Menu.Item key="1001">
+                  <Link to="/map/map1" />
+                  地图初始化
                   {/* <Redirect to={'/map/map1'}/>option1 */}
                 </Menu.Item>
-                <Menu.Item key="2">option2</Menu.Item>
-                <Menu.Item key="3">option3</Menu.Item>
-                <Menu.Item key="4">option4</Menu.Item>
+                <Menu.Item key="2">
+                  <Link to="/mapControl/navControl" />
+                  地图控件
+                </Menu.Item>
+                <Menu.Item key="1002">缩放控件</Menu.Item>
+                <Menu.Item key="1003">鼠标位置</Menu.Item>
+                <Menu.Item key="1004">比例尺</Menu.Item>
+                <Menu.Item key="1005">鹰眼</Menu.Item>
+                <Menu.Item key="1006">图层选择</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub2"
@@ -88,7 +94,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="5">option5</Menu.Item>
+                <Menu.Item key="2001">
+                  <Link to="/mapOperation/mapOperation" />
+                  地图操作
+                </Menu.Item>
                 <Menu.Item key="6">option6</Menu.Item>
                 <Menu.Item key="7">option7</Menu.Item>
                 <Menu.Item key="8">option8</Menu.Item>
@@ -116,10 +125,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="13">option9</Menu.Item>
+                <Menu.Item key="14">option10</Menu.Item>
+                <Menu.Item key="15">option11</Menu.Item>
+                <Menu.Item key="16">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub5"
@@ -130,10 +139,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="17">option9</Menu.Item>
+                <Menu.Item key="18">option10</Menu.Item>
+                <Menu.Item key="19">option11</Menu.Item>
+                <Menu.Item key="20">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub6"
@@ -144,10 +153,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="21">option9</Menu.Item>
+                <Menu.Item key="22">option10</Menu.Item>
+                <Menu.Item key="23">option11</Menu.Item>
+                <Menu.Item key="24">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub7"
@@ -158,10 +167,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="25">option9</Menu.Item>
+                <Menu.Item key="26">option10</Menu.Item>
+                <Menu.Item key="27">option11</Menu.Item>
+                <Menu.Item key="28">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub8"
@@ -172,10 +181,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="29">option9</Menu.Item>
+                <Menu.Item key="30">option10</Menu.Item>
+                <Menu.Item key="31">option11</Menu.Item>
+                <Menu.Item key="32">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub9"
@@ -186,10 +195,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="33">option9</Menu.Item>
+                <Menu.Item key="34">option10</Menu.Item>
+                <Menu.Item key="35">option11</Menu.Item>
+                <Menu.Item key="36">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub10"
@@ -200,10 +209,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="37">option9</Menu.Item>
+                <Menu.Item key="38">option10</Menu.Item>
+                <Menu.Item key="39">option11</Menu.Item>
+                <Menu.Item key="40">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub11"
@@ -214,10 +223,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="41">option9</Menu.Item>
+                <Menu.Item key="42">option10</Menu.Item>
+                <Menu.Item key="43">option11</Menu.Item>
+                <Menu.Item key="44">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub12"
@@ -228,10 +237,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="45">option9</Menu.Item>
+                <Menu.Item key="46">option10</Menu.Item>
+                <Menu.Item key="47">option11</Menu.Item>
+                <Menu.Item key="48">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub13"
@@ -242,10 +251,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="49">option9</Menu.Item>
+                <Menu.Item key="50">option10</Menu.Item>
+                <Menu.Item key="51">option11</Menu.Item>
+                <Menu.Item key="52">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub14"
@@ -256,10 +265,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="53">option9</Menu.Item>
+                <Menu.Item key="54">option10</Menu.Item>
+                <Menu.Item key="55">option11</Menu.Item>
+                <Menu.Item key="56">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub15"
@@ -270,10 +279,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="57">option9</Menu.Item>
+                <Menu.Item key="58">option10</Menu.Item>
+                <Menu.Item key="59">option11</Menu.Item>
+                <Menu.Item key="60">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub16"
@@ -284,10 +293,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="61">option9</Menu.Item>
+                <Menu.Item key="62">option10</Menu.Item>
+                <Menu.Item key="63">option11</Menu.Item>
+                <Menu.Item key="64">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub17"
@@ -298,10 +307,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="65">option9</Menu.Item>
+                <Menu.Item key="66">option10</Menu.Item>
+                <Menu.Item key="67">option11</Menu.Item>
+                <Menu.Item key="68">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub18"
@@ -312,10 +321,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="69">option9</Menu.Item>
+                <Menu.Item key="70">option10</Menu.Item>
+                <Menu.Item key="71">option11</Menu.Item>
+                <Menu.Item key="72">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub19"
@@ -326,10 +335,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="73">option9</Menu.Item>
+                <Menu.Item key="74">option10</Menu.Item>
+                <Menu.Item key="75">option11</Menu.Item>
+                <Menu.Item key="76">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub20"
@@ -340,10 +349,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="77">option9</Menu.Item>
+                <Menu.Item key="78">option10</Menu.Item>
+                <Menu.Item key="79">option11</Menu.Item>
+                <Menu.Item key="80">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub21"
@@ -354,10 +363,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="81">option9</Menu.Item>
+                <Menu.Item key="82">option10</Menu.Item>
+                <Menu.Item key="83">option11</Menu.Item>
+                <Menu.Item key="84">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub22"
@@ -368,10 +377,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="85">option9</Menu.Item>
+                <Menu.Item key="86">option10</Menu.Item>
+                <Menu.Item key="87">option11</Menu.Item>
+                <Menu.Item key="88">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub23"
@@ -382,10 +391,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="89">option9</Menu.Item>
+                <Menu.Item key="90">option10</Menu.Item>
+                <Menu.Item key="91">option11</Menu.Item>
+                <Menu.Item key="92">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub24"
@@ -396,10 +405,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="93">option9</Menu.Item>
+                <Menu.Item key="94">option10</Menu.Item>
+                <Menu.Item key="95">option11</Menu.Item>
+                <Menu.Item key="96">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub25"
@@ -410,10 +419,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="97">option9</Menu.Item>
+                <Menu.Item key="98">option10</Menu.Item>
+                <Menu.Item key="99">option11</Menu.Item>
+                <Menu.Item key="100">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub26"
@@ -424,10 +433,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="101">option9</Menu.Item>
+                <Menu.Item key="102">option10</Menu.Item>
+                <Menu.Item key="103">option11</Menu.Item>
+                <Menu.Item key="104">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub27"
@@ -438,10 +447,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="105">option9</Menu.Item>
+                <Menu.Item key="106">option10</Menu.Item>
+                <Menu.Item key="107">option11</Menu.Item>
+                <Menu.Item key="108">option12</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub28"
@@ -452,10 +461,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="109">option9</Menu.Item>
+                <Menu.Item key="110">option10</Menu.Item>
+                <Menu.Item key="111">option11</Menu.Item>
+                <Menu.Item key="112">option12</Menu.Item>
               </SubMenu>
             </Menu>
           </Sider>
@@ -471,7 +480,7 @@ class SiderDemo extends Component {
                 // padding: 24,
                 margin: 0,
                 minHeight: 280,
-                marginTop:15
+                marginTop: 15,
               }}
             >
               {this.props.children}
