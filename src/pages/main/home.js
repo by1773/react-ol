@@ -73,17 +73,28 @@ class SiderDemo extends Component {
                 <Menu.Item key="1001">
                   <Link to="/map/map1" />
                   地图初始化
-                  {/* <Redirect to={'/map/map1'}/>option1 */}
                 </Menu.Item>
                 <Menu.Item key="2">
                   <Link to="/mapControl/navControl" />
                   地图控件
                 </Menu.Item>
                 <Menu.Item key="1002">缩放控件</Menu.Item>
-                <Menu.Item key="1003">鼠标位置</Menu.Item>
-                <Menu.Item key="1004">比例尺</Menu.Item>
-                <Menu.Item key="1005">鹰眼</Menu.Item>
-                <Menu.Item key="1006">图层选择</Menu.Item>
+                <Menu.Item key="1003">
+                  <Link to="/mapControl/mousePosition" />
+                  鼠标位置
+                </Menu.Item>
+                <Menu.Item key="1004">
+                  <Link to="/mapControl/mapScaleLineControl" />
+                  比例尺
+                </Menu.Item>
+                <Menu.Item key="1005">
+                  <Link to="/mapControl/overviewMap" />
+                  鹰眼
+                </Menu.Item>
+                <Menu.Item key="1006">
+                  <Link to="/mapControl/mapLayers" />
+                  图层选择
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub2"

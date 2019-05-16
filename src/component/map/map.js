@@ -19,20 +19,20 @@ class MapComponent extends Component {
   componentDidMount() {
     let { center } = this.props;
     if (!center) {
-      center = {
+      center = { 
         lon: 113.8,
         lat: 34.6,
       };
     }
     this.map = new Map({
-      controls: defaultControls().extend([
-        new ZoomToExtent({
-          extent: [
-            813079.7791264898, 5929220.284081122,
-            848966.9639063801, 5936863.986909639
-          ]
-        })
-      ]),
+      // controls: defaultControls().extend([
+      //   new ZoomToExtent({
+      //     extent: [
+      //       813079.7791264898, 5929220.284081122,
+      //       848966.9639063801, 5936863.986909639
+      //     ]
+      //   })
+      // ]),
       view: new View({
         center: fromLonLat([center.lon, center.lat]),
         zoom: 5,
@@ -45,19 +45,11 @@ class MapComponent extends Component {
       target: 'map',
 
     });
-    // setState是异步函数
-    this.setState({
-      // map: map,
-      title:"张三"
-    });
-  
-
-    console.log(this.state)
-  }
-
-  addNavControl =()=>{
-    console.log(this.state)
-    console.log("导航控件",this.state.map)
+    //  传值给父组件
+    if(this.props.getMap){
+       this.props.getMap("map对象")
+    }
+   
   }
 
   render() {

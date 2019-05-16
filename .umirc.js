@@ -4,7 +4,7 @@ export default {
   treeShaking: true,
   // 引入路由
   ...require('./src/pages/index'),
-  history:"hash",
+  history:"hash", 
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
@@ -13,7 +13,6 @@ export default {
       dynamicImport: false,
       title: 'react-openlayer',
       dll: false,
-      
       routes: {
         exclude: [
           /models\//,
