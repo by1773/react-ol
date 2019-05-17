@@ -36,7 +36,8 @@ module.exports = {
         { path: '/mapControl/overviewMap', component: './mapControl/mapOverviewMap.js' },
         { path: '/mapControl/mapLayers', component: './mapControl/mapLayers.js' },
         // 地图操作
-        { path: '/mapOperation/mapOperation', component: './mapOperation/mapOperation.js' },  //导航控件
+        { path: '/mapOperation/mapOperation', component: './mapOperation/mapOperation.js' },  //地图操作
+        { path: '/mapOperation/mapBackground', component: './mapOperation/mapBackground.js' },  //设置地图背景
         
       ],
     

@@ -109,9 +109,20 @@ class SiderDemo extends Component {
                   <Link to="/mapOperation/mapOperation" />
                   地图操作
                 </Menu.Item>
-                <Menu.Item key="6">option6</Menu.Item>
-                <Menu.Item key="7">option7</Menu.Item>
-                <Menu.Item key="8">option8</Menu.Item>
+                <Menu.Item key="2002">
+                  <Link to="/mapOperation/mapBackground" />
+                  设置地图背景
+                </Menu.Item>
+                <Menu.Item key="2003">地图定位</Menu.Item>
+                <Menu.Item key="2004">显示级别</Menu.Item>
+                <Menu.Item key="2005">视窗逻辑坐标</Menu.Item>
+                <Menu.Item key="2006">地图域当前的信息</Menu.Item>
+                <Menu.Item key="2007">导出成图片</Menu.Item>
+                <Menu.Item key="2008">导出成pdf</Menu.Item>
+                <Menu.Item key="2009">地图事件</Menu.Item>
+                <Menu.Item key="2010">图层探查</Menu.Item>
+                <Menu.Item key="2011">图层层级控制</Menu.Item>
+                <Menu.Item key="2012">图层组控制</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub3"
@@ -122,10 +133,18 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9">option9</Menu.Item>
-                <Menu.Item key="10">option10</Menu.Item>
-                <Menu.Item key="11">option11</Menu.Item>
-                <Menu.Item key="12">option12</Menu.Item>
+                <Menu.Item key="3001">坐标添加点</Menu.Item>
+                <Menu.Item key="3002">坐标添加线</Menu.Item>
+                <Menu.Item key="3003">坐标添加面</Menu.Item>
+                <Menu.Item key="3004">坐标添加正方形</Menu.Item>
+                <Menu.Item key="3005">坐标添加矩形</Menu.Item>
+                <Menu.Item key="3006">坐标添加多边形·</Menu.Item>
+                <Menu.Item key="3007">绘制几何图形</Menu.Item>
+                <Menu.Item key="3008">绘制任意图形</Menu.Item>
+                <Menu.Item key="3009">图形样式编辑</Menu.Item>
+                <Menu.Item key="3010">图形交互编辑</Menu.Item>
+                <Menu.Item key="3011">获取几何信息</Menu.Item>
+                <Menu.Item key="3012">绘制箭头线</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub4"
@@ -136,10 +155,11 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="13">option9</Menu.Item>
-                <Menu.Item key="14">option10</Menu.Item>
-                <Menu.Item key="15">option11</Menu.Item>
-                <Menu.Item key="16">option12</Menu.Item>
+                <Menu.Item key="4001">图片标注</Menu.Item>
+                <Menu.Item key="4002">文字标注</Menu.Item>
+                <Menu.Item key="4003">图文标注</Menu.Item>
+                <Menu.Item key="4004">聚合标注</Menu.Item>
+                <Menu.Item key="4004">popup弹出框</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub5"
@@ -150,10 +170,9 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="17">option9</Menu.Item>
-                <Menu.Item key="18">option10</Menu.Item>
-                <Menu.Item key="19">option11</Menu.Item>
-                <Menu.Item key="20">option12</Menu.Item>
+                <Menu.Item key="5001">要素动画</Menu.Item>
+                <Menu.Item key="5002">要素移动</Menu.Item>
+                <Menu.Item key="5003">航线动画</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub6"
@@ -164,10 +183,9 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="21">option9</Menu.Item>
-                <Menu.Item key="22">option10</Menu.Item>
-                <Menu.Item key="23">option11</Menu.Item>
-                <Menu.Item key="24">option12</Menu.Item>
+                <Menu.Item key="6001">天地图</Menu.Item>
+                <Menu.Item key="6002">百度地图</Menu.Item>
+                <Menu.Item key="6003">高德地图</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub7"
@@ -178,10 +196,9 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="25">option9</Menu.Item>
-                <Menu.Item key="26">option10</Menu.Item>
-                <Menu.Item key="27">option11</Menu.Item>
-                <Menu.Item key="28">option12</Menu.Item>
+                <Menu.Item key="7001">加载WMTS</Menu.Item>
+                <Menu.Item key="7002">加载WMS</Menu.Item>
+                <Menu.Item key="7003">加载WFS</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub8"
@@ -192,10 +209,7 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="29">option9</Menu.Item>
-                <Menu.Item key="30">option10</Menu.Item>
-                <Menu.Item key="31">option11</Menu.Item>
-                <Menu.Item key="32">option12</Menu.Item>
+                <Menu.Item key="8001">地图动画</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub9"
@@ -206,10 +220,7 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="33">option9</Menu.Item>
-                <Menu.Item key="34">option10</Menu.Item>
-                <Menu.Item key="35">option11</Menu.Item>
-                <Menu.Item key="36">option12</Menu.Item>
+                <Menu.Item key="9001">测量</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub10"
@@ -220,10 +231,7 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="37">option9</Menu.Item>
-                <Menu.Item key="38">option10</Menu.Item>
-                <Menu.Item key="39">option11</Menu.Item>
-                <Menu.Item key="40">option12</Menu.Item>
+                <Menu.Item key="1001">热力图</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub11"
@@ -234,10 +242,17 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="41">option9</Menu.Item>
-                <Menu.Item key="42">option10</Menu.Item>
-                <Menu.Item key="43">option11</Menu.Item>
-                <Menu.Item key="44">option12</Menu.Item>
+                <Menu.Item key="1101">瓦片地图</Menu.Item>
+                <Menu.Item key="1102">矢量地图文档</Menu.Item>
+                <Menu.Item key="1103">矢量图层</Menu.Item>
+                <Menu.Item key="1104">动态截图</Menu.Item>
+                <Menu.Item key="1105">天地图</Menu.Item>
+                <Menu.Item key="1106">Google地图</Menu.Item>
+                <Menu.Item key="1107">Arcgis(经纬度)</Menu.Item>
+                <Menu.Item key="1108">OGC的WMS(地图文档)</Menu.Item>
+                <Menu.Item key="1109">OGC的WMS(矢量图层)</Menu.Item>
+                <Menu.Item key="1110">OGC的WFS</Menu.Item>
+                <Menu.Item key="1111">OGC的WMTS</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub12"
@@ -248,10 +263,11 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="45">option9</Menu.Item>
-                <Menu.Item key="46">option10</Menu.Item>
-                <Menu.Item key="47">option11</Menu.Item>
-                <Menu.Item key="48">option12</Menu.Item>
+                <Menu.Item key="1201">矢量地图文档动态标记</Menu.Item>
+                <Menu.Item key="1202">矢量图层显示样式</Menu.Item>
+                <Menu.Item key="1203">矢量图层显示过滤</Menu.Item>
+                <Menu.Item key="1204">矢量地图文档过滤显示</Menu.Item>
+                <Menu.Item key="1205">地图文档图层控制显示</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub13"
