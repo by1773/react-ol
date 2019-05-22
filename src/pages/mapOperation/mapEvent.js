@@ -1,7 +1,6 @@
 // 设置地图背景色
 import React, { Component } from 'react';
 import Map from '../../component/map/map';
-// import bg from '../../assets/yay.jpg'
 import style from './map.css'
 
 class MapOverviewMap extends Component {
@@ -13,9 +12,31 @@ class MapOverviewMap extends Component {
     }
   componentDidMount() {
     // console.log(bg)
+    let {map} = this.refs.map
+     //鼠标单击事件
+    map.on('singleclick', function (e) {
+        console.log(e)
+        alert("鼠标被单击了"+e.coordinate);
+    });
+
+    map.on('dblclick', function (e) {
+        console.log(e)
+        alert("鼠标被双击了"+e.coordinate);
+    });
+
+    
+    map.on('pointermove', function (e) {
+        console.log(e)
+        alert("鼠标移动"+e.coordinate);
+    });
+
+
+    
+    map.on('pointerdrag', function (e) {
+        console.log(e)
+        alert("鼠标拖动"+e.coordinate);
+    });
   }
-  
-   
   
   render() {
     return (

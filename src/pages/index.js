@@ -38,10 +38,13 @@ module.exports = {
         // 地图操作
         { path: '/mapOperation/mapOperation', component: './mapOperation/mapOperation.js' },  //地图操作
         { path: '/mapOperation/mapBackground', component: './mapOperation/mapBackground.js' },  //设置地图背景
-        
+        { path: '/mapOperation/MapCurrentInfo', component: './mapOperation/MapCurrentInfo.js' },  //地图域当前的信息
+        { path: '/mapOperation/mapSavePng', component: './mapOperation/mapSavePng.js' },  //地图导出png
+        { path: '/mapOperation/mapEvent', component: './mapOperation/mapEvent.js' },  //地图事件
+        { path: '/mapOperation/layerSearch', component: './mapOperation/layerSearch.js' },  //图层探查
+        { path: '/mapOperation/layerIndex', component: './mapOperation/layerIndex.js' },  //设置图层显示级别
+        { path: '/mapOperation/layerVisible', component: './mapOperation/layerVisible.js' },  //设置图层的透明度
       ],
-    
-     
     }
     
    

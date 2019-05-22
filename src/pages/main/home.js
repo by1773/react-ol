@@ -113,16 +113,33 @@ class SiderDemo extends Component {
                   <Link to="/mapOperation/mapBackground" />
                   设置地图背景
                 </Menu.Item>
-                <Menu.Item key="2003">地图定位</Menu.Item>
-                <Menu.Item key="2004">显示级别</Menu.Item>
-                <Menu.Item key="2005">视窗逻辑坐标</Menu.Item>
-                <Menu.Item key="2006">地图域当前的信息</Menu.Item>
-                <Menu.Item key="2007">导出成图片</Menu.Item>
+                <Menu.Item key="2003">地图定位(设置地图中心)</Menu.Item>
+                <Menu.Item key="2004">显示级别（设置显示地图显示级别）</Menu.Item>
+                {/* <Menu.Item key="2005">视窗逻辑坐标</Menu.Item> */}
+                <Menu.Item key="2006">
+                  <Link to="/mapOperation/MapCurrentInfo" />
+                  地图域当前的信息
+                </Menu.Item>
+                <Menu.Item key="2007">
+                  <Link to="/mapOperation/mapSavePng" />
+                  导出成图片
+                </Menu.Item>
                 <Menu.Item key="2008">导出成pdf</Menu.Item>
-                <Menu.Item key="2009">地图事件</Menu.Item>
-                <Menu.Item key="2010">图层探查</Menu.Item>
-                <Menu.Item key="2011">图层层级控制</Menu.Item>
-                <Menu.Item key="2012">图层组控制</Menu.Item>
+                <Menu.Item key="2009">
+                  <Link to="/mapOperation/mapEvent" />
+                  地图事件
+                </Menu.Item>
+                <Menu.Item key="2010">
+                  <Link to="/mapOperation/layerSearch" />
+                  图层探查
+                </Menu.Item>
+                <Menu.Item key="2011">
+                  <Link to="/mapOperation/layerIndex" />
+                  图层层级控制
+                </Menu.Item>
+                <Menu.Item key="2012">
+                  <Link to='/mapOperation/layerVisible'></Link>
+                  图层组控制</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub3"
