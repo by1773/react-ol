@@ -138,8 +138,9 @@ class SiderDemo extends Component {
                   图层层级控制
                 </Menu.Item>
                 <Menu.Item key="2012">
-                  <Link to='/mapOperation/layerVisible'></Link>
-                  图层组控制</Menu.Item>
+                  <Link to="/mapOperation/layerVisible" />
+                  图层组控制
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub3"
@@ -150,16 +151,32 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="3001">坐标添加点</Menu.Item>
-                <Menu.Item key="3002">坐标添加线</Menu.Item>
+                <Menu.Item key="3001">
+                  <Link to="/mapGraph/addGraph" />
+                  坐标添加点线面
+                </Menu.Item>
+                {/* <Menu.Item key="3002">坐标添加线</Menu.Item>
                 <Menu.Item key="3003">坐标添加面</Menu.Item>
                 <Menu.Item key="3004">坐标添加正方形</Menu.Item>
                 <Menu.Item key="3005">坐标添加矩形</Menu.Item>
-                <Menu.Item key="3006">坐标添加多边形·</Menu.Item>
-                <Menu.Item key="3007">绘制几何图形</Menu.Item>
-                <Menu.Item key="3008">绘制任意图形</Menu.Item>
+                <Menu.Item key="3006">坐标添加多边形·</Menu.Item> */}
+                <Menu.Item key="3007">
+                  <Link to="/mapGraph/drawGeometry" />
+                  绘制几何图形
+                </Menu.Item>
+                <Menu.Item key="3008">
+                  <Link to="/mapGraph/drawGraphMove" />
+                  绘制任意图形
+                </Menu.Item>
                 <Menu.Item key="3009">图形样式编辑</Menu.Item>
-                <Menu.Item key="3010">图形交互编辑</Menu.Item>
+                <Menu.Item key="3010">
+                  <Link to="/mapGraph/drawEditGraph" />
+                  图形交互编辑（选择可编辑）
+                </Menu.Item>
+                <Menu.Item key="3013">
+                  <Link to= '/mapGraph/editGraph' />
+                  图形激活与编辑
+                </Menu.Item>
                 <Menu.Item key="3011">获取几何信息</Menu.Item>
                 <Menu.Item key="3012">绘制箭头线</Menu.Item>
               </SubMenu>

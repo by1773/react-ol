@@ -44,6 +44,13 @@ module.exports = {
         { path: '/mapOperation/layerSearch', component: './mapOperation/layerSearch.js' },  //图层探查
         { path: '/mapOperation/layerIndex', component: './mapOperation/layerIndex.js' },  //设置图层显示级别
         { path: '/mapOperation/layerVisible', component: './mapOperation/layerVisible.js' },  //设置图层的透明度
+
+        // 图形操作
+        { path: '/mapGraph/addGraph', component: './mapGraph/addGraph.js' },  //设置图层的透明度
+        { path: '/mapGraph/drawGeometry', component: './mapGraph/drawGeometry.js' },  //绘制图形
+        { path: '/mapGraph/drawGraphMove', component: './mapGraph/drawGraphMove.js' },  //绘制任意图形，即鼠标移动绘制图形
+        { path: '/mapGraph/drawEditGraph', component: './mapGraph/drawEditGraph.js' },  //绘制编辑图形
+        { path: '/mapGraph/editGraph', component: './mapGraph/editGraph.js' },  //绘制编辑图形
       ],
     }
     
