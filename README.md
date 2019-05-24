@@ -4,20 +4,22 @@
 练习使用react与openlayers结合来写webgis
 
 #### 软件架构
-软件架构说明
+此次联系将react和openlayers来进行项目搭建，
 
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 代码克隆
+  git clone https://gitee.com/laingyua/react-openlayers.git
+2. 安装必要的依赖
+   yarn
+3. 运行代码
+   yarn start
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. umi+dva+openlayers
+2. 运行项目必须安装node,yarn 等基础环境
 
 #### 参与贡献
 
