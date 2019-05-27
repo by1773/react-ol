@@ -71,7 +71,7 @@ class SiderDemo extends Component {
                 }
               >
                 <Menu.Item key="1001">
-                  <Link to="/map/map1" />
+                  <Link to="/" />
                   地图初始化
                 </Menu.Item>
                 <Menu.Item key="2">
@@ -174,11 +174,14 @@ class SiderDemo extends Component {
                   图形交互编辑（选择可编辑）
                 </Menu.Item>
                 <Menu.Item key="3013">
-                  <Link to= '/mapGraph/editGraph' />
+                  <Link to="/mapGraph/editGraph" />
                   图形激活与编辑
                 </Menu.Item>
-                <Menu.Item key="3011">获取几何信息</Menu.Item>
-                <Menu.Item key="3012">绘制箭头线</Menu.Item>
+                {/* <Menu.Item key="3011">获取几何信息</Menu.Item> */}
+                <Menu.Item key="3012">
+                  <Link to="/mapGraph/drawLinearrow" />
+                  绘制箭头线
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub4"
@@ -189,11 +192,14 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="4001">图片标注</Menu.Item>
+                <Menu.Item key="4001">
+                  <Link to="/mapMark/addImgeMark" />
+                  图片标注
+                </Menu.Item>
                 <Menu.Item key="4002">文字标注</Menu.Item>
                 <Menu.Item key="4003">图文标注</Menu.Item>
                 <Menu.Item key="4004">聚合标注</Menu.Item>
-                <Menu.Item key="4004">popup弹出框</Menu.Item>
+                <Menu.Item key="4005">popup弹出框</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub5"

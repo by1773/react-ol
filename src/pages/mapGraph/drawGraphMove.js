@@ -103,6 +103,9 @@ class DrawGeometry extends Component {
       //  设置后移动鼠标绘制图形
       freehand: true,
     });
+    draw.on("drawend",function(e){
+      console.log("绘制结束后获取信息",e.feature.getGeometry())
+    })
     map.addInteraction(draw);
     //  map.removeInteraction(draw);    移除
   };
