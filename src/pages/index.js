@@ -27,8 +27,8 @@ module.exports = {
       component:'./main/home.js',
       // redirect:"/map/map1",
       routes: [
-        { path: '/map/map1', component: './main/index.js' },
-         
+        // { path: '/map/map1', component: './main/index.js' },
+        { path: '/', component: './main/index.js' },
         // 地图空间
         { path: '/mapControl/navControl', component: './mapControl/navControl.js' },
         { path: '/mapControl/mousePosition', component: './mapControl/mousePosition.js' },
@@ -51,6 +51,10 @@ module.exports = {
         { path: '/mapGraph/drawGraphMove', component: './mapGraph/drawGraphMove.js' },  //绘制任意图形，即鼠标移动绘制图形
         { path: '/mapGraph/drawEditGraph', component: './mapGraph/drawEditGraph.js' },  //绘制编辑图形
         { path: '/mapGraph/editGraph', component: './mapGraph/editGraph.js' },  //绘制编辑图形
+        { path: '/mapGraph/drawLinearrow', component: './mapGraph/drawLinearrow.js' },  //绘制箭头线
+
+        // 地图标注
+        { path: '/mapMark/addImgeMark', component: './mapMark/addImgeMark.js' },  //图片标注
       ],
     }
     
