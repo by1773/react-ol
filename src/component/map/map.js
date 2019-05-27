@@ -1,11 +1,13 @@
 // import ol from "./ol.css"
+// react 组件
 import React, { Component } from 'react';
+// openlayers 函数
 import Map from 'ol/Map';
 import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { fromLonLat } from 'ol/proj.js';
-import {defaults as defaultControls, ZoomToExtent} from 'ol/control.js';
+import {defaults as defaultControls, ZoomToExtent} from 'ol/control.js'
 
 
 class MapComponent extends Component {
@@ -25,30 +27,22 @@ class MapComponent extends Component {
       };
     }
     this.map = new Map({
-      // controls: defaultControls().extend([
-      //   new ZoomToExtent({
-      //     extent: [
-      //       813079.7791264898, 5929220.284081122,
-      //       848966.9639063801, 5936863.986909639
-      //     ]
-      //   })
-      // ]),
       view: new View({
-        center: fromLonLat([center.lon, center.lat]),
+        center: fromLonLat([center.lon, center.lat]),   //将WGS8坐标转化为web墨卡托坐标
         zoom: 5,
       }),
       layers: [
         new TileLayer({
-          source: new OSM(),
+          source: new OSM(), //加载OSM数据
         }),
       ],
-      target: 'map',
+      target: 'map',   //绑定地图容器
 
     });
     //  传值给父组件
-    if(this.props.getMap){
-       this.props.getMap("map对象")
-    }
+    // if(this.props.getMap){
+    //    this.props.getMap("map对象")
+    // }
    
   }
 

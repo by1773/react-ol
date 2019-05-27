@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Map from '../../component/map/map';
 import {createStringXY} from 'ol/coordinate.js';
 import mousePosition from 'ol/control/MousePosition.js';
-import {defaults as defaultControls} from 'ol/control.js';
 
 class MousePosition extends Component {
     constructor(props){
@@ -25,8 +24,6 @@ class MousePosition extends Component {
         undefinedHTML: '&nbsp;'
     });
     map.addControl(mousePositionControl)
-    console.log("坐标信息",mousePositionControl)
-
   }
 
   render() {
