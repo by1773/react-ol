@@ -196,10 +196,22 @@ class SiderDemo extends Component {
                   <Link to="/mapMark/addImgeMark" />
                   图片标注
                 </Menu.Item>
-                <Menu.Item key="4002">文字标注</Menu.Item>
-                <Menu.Item key="4003">图文标注</Menu.Item>
-                <Menu.Item key="4004">聚合标注</Menu.Item>
-                <Menu.Item key="4005">popup弹出框</Menu.Item>
+                <Menu.Item key="4002">
+                  <Link to="/mapMark/addMarkerLable" />
+                  文字标注
+                </Menu.Item>
+                <Menu.Item key="4003">
+                  <Link to="/mapMark/addmarker" />
+                  图文标注
+                </Menu.Item>
+                <Menu.Item key="4004">
+                  <Link to="/mapMark/maekerCluster" />
+                  聚合标注
+                </Menu.Item>
+                <Menu.Item key="4005">
+                  <Link to="/mapMark/markPopup" />
+                  popup弹出框
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub5"

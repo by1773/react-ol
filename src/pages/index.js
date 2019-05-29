@@ -55,6 +55,10 @@ module.exports = {
 
         // 地图标注
         { path: '/mapMark/addImgeMark', component: './mapMark/addImgeMark.js' },  //图片标注
+        { path: '/mapMark/addMarkerLable', component: './mapMark/addMarkerLable.js' },  //图片标注
+        { path: '/mapMark/addmarker', component: './mapMark/addmarker.js' },  //图文标注
+        { path: '/mapMark/markPopup', component: './mapMark/markPopup.js' },  //popup弹窗
+        { path: '/mapMark/maekerCluster', component: './mapMark/maekerCluster.js' },  //聚合
       ],
     }
     
