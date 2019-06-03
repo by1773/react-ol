@@ -222,9 +222,18 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="5001">要素动画</Menu.Item>
-                <Menu.Item key="5002">要素移动</Menu.Item>
-                <Menu.Item key="5003">航线动画</Menu.Item>
+                <Menu.Item key="5001">
+                  <Link to="/animate/customAnimation" />
+                  要素动画
+                </Menu.Item>
+                <Menu.Item key="5002">
+                  <Link to="/animate/featureMove" />
+                  要素移动
+                </Menu.Item>
+                <Menu.Item key="5003">
+                  <Link to="/animate/fight" />
+                  航线动画
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub6"

@@ -59,6 +59,11 @@ module.exports = {
         { path: '/mapMark/addmarker', component: './mapMark/addmarker.js' },  //图文标注
         { path: '/mapMark/markPopup', component: './mapMark/markPopup.js' },  //popup弹窗
         { path: '/mapMark/maekerCluster', component: './mapMark/maekerCluster.js' },  //聚合
+
+        // 动画
+        { path: '/animate/customAnimation', component: './animate/customAnimation.js' },  //自定义动画
+        { path: '/animate/featureMove', component: './animate/featureMove.js' },  //估计运动
+        { path: '/animate/fight', component: './animate/fight.js' },  //飞行动画
       ],
     }
     
