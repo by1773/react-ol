@@ -244,9 +244,18 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="6001">天地图</Menu.Item>
-                <Menu.Item key="6002">百度地图</Menu.Item>
-                <Menu.Item key="6003">高德地图</Menu.Item>
+                <Menu.Item key="6001">
+                  <Link to="/mapServer/tianDiTu" />
+                  天地图
+                </Menu.Item>
+                <Menu.Item key="6002">
+                  <Link to="/mapServer/bMap" />
+                  百度地图
+                </Menu.Item>
+                <Menu.Item key="6003">
+                  <Link to="/mapServer/aMap" />
+                  高德地图
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub7"

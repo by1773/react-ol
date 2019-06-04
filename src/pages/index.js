@@ -64,6 +64,11 @@ module.exports = {
         { path: '/animate/customAnimation', component: './animate/customAnimation.js' },  //自定义动画
         { path: '/animate/featureMove', component: './animate/featureMove.js' },  //估计运动
         { path: '/animate/fight', component: './animate/fight.js' },  //飞行动画
+
+        // 第三方的地图显示
+        { path: '/mapServer/tianDiTu', component: './mapServer/tianDiTu.js' },  //加载WGS84坐标系的天地图
+        { path: '/mapServer/aMap', component: './mapServer/aMap.js' },  //加载高德地图
+        { path: '/mapServer/bMap', component: './mapServer/bMap.js' },  //加载百度地图
       ],
     }
     

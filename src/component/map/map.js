@@ -30,6 +30,7 @@ class MapComponent extends Component {
       view: new View({
         center: fromLonLat([center.lon, center.lat]),   //将WGS8坐标转化为web墨卡托坐标
         zoom: 5,
+        projection: "EPSG:3857"
       }),
       layers: [
         new TileLayer({
