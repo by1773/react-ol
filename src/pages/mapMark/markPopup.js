@@ -18,6 +18,7 @@ import Overlay from 'ol/Overlay.js';
 import { Icon, Style, Text, Fill, Stroke } from 'ol/style';
 // mark标注图片
 import markImage from '../../assets/Marker.png';
+import Test from '../mapMark/test';
 class AddMarker extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +26,7 @@ class AddMarker extends Component {
   }
   componentDidMount() {
     let { map } = this.refs.map;
-    let that = this
+    let that = this;
     //创建标注要素
     let markFeature = new Feature({
       geometry: new Point(fromLonLat([116.28, 39.54])),
@@ -47,108 +48,31 @@ class AddMarker extends Component {
     this.setState({
       vectorSource,
     });
-    /**
-    * 实现popup的html元素
-    */
-    var container = document.getElementById('popup');
-    var content = document.getElementById('popup-content');
-    var closer = document.getElementById('popup-closer');
-    /**
-     * 在地图容器中创建一个Overlay
-     */
-    var popup = new Overlay({
-      //要转换成overlay的HTML元素
-      element: container,
-      //当前窗口可见
-      autoPan: true,
-      //Popup放置的位置
-      positioning: 'bottom-center',
-      //是否应该停止事件传播到地图窗口
-      stopEvent: false,
-      autoPanAnimation: {
-        //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度
-        duration: 250,
-      },
-    });
-    map.addOverlay(popup);
-    var featuerInfo = {
-        geo:  fromLonLat([116.28, 39.54]),
-        att: {
-            //标注信息的标题内容
-            title: "北京市(中华人民共和国首都)",
-            //标注详细信息链接
-            titleURL: "http://www.openlayers.org/",
-            //标注内容简介
-            text: "北京（Beijing），简称京，中华人民共和国首都、直辖市，中国的政治、文化和国际交往中心……",
-            //标注的图片
-            // imgURL: "../../images/label/bj.png"
-        }
-    }
-    // map.on('singleclick', function(e) {
-    //     console.log(e);
-    //     // alert("鼠标被单击了"+e.coordinate);
-    //     that.addMakerOn(e.coordinate);
-    // });
+
     // 添加点击事件
     map.on('click', function(evt) {
-        console.log(evt)
+      console.log(evt);
       //判断当前单击处是否有要素，捕获到要素时弹出popup
       var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
         return feature;
       });
-      console.log(content)
       if (feature) {
-          console.log("点击了marker点")
-        //清空popup的内容容器
-        // content.innerHTML = '';
-        //在popup中加载当前要素的具体信息
-        // that.addFeatrueInfo(featuerInfo,content);
-        // if (popup.getPosition() == undefined) {
-        //     console.log("++++++")
-          //设置popup的位置
-        //   popup.setPosition(fromLonLat([116.28, 39.54]));
-        // }
+        console.log('点击了marker点');
+        that.showInfo(map, evt.coordinate);
       }
     });
   }
 
-    /**
-    * 动态创建popup的具体内容
-    * @param {string} title
-    */
-    addFeatrueInfo = (info,content)=> {
-        //新增a元素
-        var elementA = document.createElement('a');
-        elementA.className = "markerInfo";
-        elementA.href = info.att.titleURL;
-        //elementA.innerText = info.att.title;
-        this.setInnerText(elementA, info.att.title);
-        // 新建的div元素添加a子节点
-        content.appendChild(elementA);
-        //新增div元素
-        var elementDiv = document.createElement('div');
-        elementDiv.className = "markerText";
-        //elementDiv.innerText = info.att.text;
-        this.setInnerText(elementDiv, info.att.text);
-        // 为content添加div子节点
-        content.appendChild(elementDiv);
-        //新增img元素
-        var elementImg = document.createElement('img');
-        elementImg.className = "markerImg";
-        elementImg.src = info.att.imgURL;
-        // 为content添加img子节点
-        content.appendChild(elementImg);
-    }
-    /**
-    * 动态设置元素文本内容（兼容）
-    */
-    setInnerText = (element, text) =>{
-        if (typeof element.textContent == "string") {
-            element.textContent = text;
-        } else {
-            element.innerText = text;
-        }
-    }
+  showInfo = (map, coordinate) => {
+    var overlay = new Overlay({
+      position: coordinate,
+      element: document.getElementById('marker'),
+      autoPan: true,
+      autoPanMargin: 20,
+      positioning: 'center-center',
+    });
+    map.addOverlay(overlay);
+  };
 
   addMarker = () => {
     let { map } = this.refs.map;
@@ -216,13 +140,15 @@ class AddMarker extends Component {
       <div>
         {/* <img src={bg}></img> */}
         <button onClick={this.addMarker}>点击开始添加标注</button>
-        <Map ref="map" center={{ lon: 113.8, lat: 34.6 }}>
-          <div id="popup" class="ol-popup">
-            <a href="#" id="popup-closer" class="ol-popup-closer" />
-            <div id="popup-content" />
+        <Map ref="map" center={{ lon: 113.8, lat: 34.6 }} />
+        <div style={{ display: 'none' }}>
+          <div id="marker" title="Marker" style={{ background: 'white' }}>
+            <Test />
+            <div>++++++++++++++</div>
+            <div>++++++++++++++</div>
+            <div>++++++++++++++</div>
           </div>
-        </Map>
-        ;
+        </div>
       </div>
     );
   }

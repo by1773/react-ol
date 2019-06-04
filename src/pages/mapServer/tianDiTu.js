@@ -3,8 +3,8 @@ import TileLayer from 'ol/layer/Tile';
 import XYZ from 'ol/source/XYZ.js';
 import Map from 'ol/Map';
 import View from 'ol/View';
-import { fromLonLat } from 'ol/proj';
-
+import Overlay from 'ol/Overlay.js';
+import Test from '../mapMark/test';
 class MapOverviewMap extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +12,7 @@ class MapOverviewMap extends Component {
   }
   componentDidMount() {
     let { mapkey } = window.config;
+    let that = this;
     var TiandiMap_vec = new TileLayer({
       name: '天地图矢量图层',
       source: new XYZ({
@@ -50,6 +51,8 @@ class MapOverviewMap extends Component {
       layers: [TiandiMap_vec, TiandiMap_cva, TiandiMap_img, TiandiMap_cia],
       target: 'map', //绑定地图容器
     });
+
+ 
   }
 
   render() {
