@@ -266,7 +266,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="7001">加载WMTS</Menu.Item>
+                <Menu.Item key="7001">
+                  <Link to="/OGCSource/WMTS" />
+                  加载WMTS
+                </Menu.Item>
                 <Menu.Item key="7002">加载WMS</Menu.Item>
                 <Menu.Item key="7003">加载WFS</Menu.Item>
               </SubMenu>

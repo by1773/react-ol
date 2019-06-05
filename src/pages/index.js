@@ -69,6 +69,9 @@ module.exports = {
         { path: '/mapServer/tianDiTu', component: './mapServer/tianDiTu.js' },  //加载WGS84坐标系的天地图
         { path: '/mapServer/aMap', component: './mapServer/aMap.js' },  //加载高德地图
         { path: '/mapServer/bMap', component: './mapServer/bMap.js' },  //加载百度地图
+
+        // OGC的服务
+        { path: '/OGCSource/WMTS', component: './OGCSource/WMTS.js' },  //加载百度地图
       ],
     }
     
