@@ -71,7 +71,8 @@ module.exports = {
         { path: '/mapServer/bMap', component: './mapServer/bMap.js' },  //加载百度地图
 
         // OGC的服务
-        { path: '/OGCSource/WMTS', component: './OGCSource/WMTS.js' },  //加载百度地图
+        { path: '/OGCSource/WMTS', component: './OGCSource/WMTS.js' },  //加载WMYTS服务
+        { path: '/OGCSource/WMS', component: './OGCSource/WMS.js' },  //加载WMS
       ],
     }
     
