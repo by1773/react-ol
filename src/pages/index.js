@@ -73,6 +73,7 @@ module.exports = {
         // OGC的服务
         { path: '/OGCSource/WMTS', component: './OGCSource/WMTS.js' },  //加载WMYTS服务
         { path: '/OGCSource/WMS', component: './OGCSource/WMS.js' },  //加载WMS
+        { path: '/OGCSource/WFS', component: './OGCSource/WFS.js' },  //加载WFS
       ],
     }
     

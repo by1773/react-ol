@@ -43,6 +43,7 @@ class WMS extends Component {
     var wmsLayer = new ImageLayer({
       source: wmsSource,
     });
+
     let view = new View({
       center: [113.4, 34.5], //将WGS8坐标转化为web墨卡托坐标
       zoom: 10,
@@ -69,8 +70,17 @@ class WMS extends Component {
     });
     this.map.on('click', function(event) {
         console.log(event)
-      var features =  that.map.getFeaturesAtPixel(event.pixel);
-      console.log("++",features)
+        var view = that.map.getView();
+        var viewResolution = view.getResolution();
+        var source = wmsLayer.getSource() 
+        var url = source.getGetFeatureInfoUrl(
+          event.coordinate, viewResolution, view.getProjection(),
+          {'INFO_FORMAT': 'application/json', 'FEATURE_COUNT': 50});
+          console.log(url)
+        if (url) {
+          //  用网络请求获取url中所含有的信息
+          // document.getElementById('nodelist').innerHTML = '<iframe seamless src="' + url + '"></iframe>';
+        }
     });
   }
 
