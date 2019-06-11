@@ -288,7 +288,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="8001">地图动画</Menu.Item>
+                <Menu.Item key="8001">
+                  <Link to="/mapAnimation/mapAnimation" />
+                  地图动画
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub9"

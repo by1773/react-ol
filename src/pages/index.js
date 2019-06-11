@@ -74,6 +74,9 @@ module.exports = {
         { path: '/OGCSource/WMTS', component: './OGCSource/WMTS.js' },  //加载WMYTS服务
         { path: '/OGCSource/WMS', component: './OGCSource/WMS.js' },  //加载WMS
         { path: '/OGCSource/WFS', component: './OGCSource/WFS.js' },  //加载WFS
+
+         // 地图动画
+         { path: '/mapAnimation/mapAnimation', component: './mapAnimation/mapAnimation.js' },  //加载WMYTS服务
       ],
     }
     
