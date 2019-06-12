@@ -302,7 +302,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="9001">测量</Menu.Item>
+                <Menu.Item key="9001">
+                  <Link to="/mapMeasure/mapMeasure" />
+                  测量
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub10"
