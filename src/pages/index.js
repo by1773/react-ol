@@ -78,6 +78,8 @@ module.exports = {
         { path: '/mapAnimation/mapAnimation', component: './mapAnimation/mapAnimation.js' },
         //量测
         { path: '/mapMeasure/mapMeasure', component: './mapMeasure/mapMeasure.js' },
+        // 热力图
+        { path: '/heatMap/heatMap', component: './heatMap/heatMap.js' },
       ],
     },
   ],

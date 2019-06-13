@@ -316,7 +316,10 @@ class SiderDemo extends Component {
                   </span>
                 }
               >
-                <Menu.Item key="1001">热力图</Menu.Item>
+                <Menu.Item key="1001">
+                  <Link to="/heatMap/heatMap" />
+                  热力图
+                </Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub11"

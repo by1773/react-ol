@@ -1,16 +1,14 @@
 // 设置地图背景色
 import React, { Component } from 'react';
 import Map from '../../component/map/map';
-// import TileLayer from 'ol/layer/Tile';
 import XYZ from 'ol/source/XYZ';
 import { unByKey } from 'ol/Observable';
 import Overlay from 'ol/Overlay';
 import { getArea, getLength, Sphere } from 'ol/sphere';
-import View from 'ol/View';
 import { LineString, Polygon } from 'ol/geom';
 import Draw from 'ol/interaction/Draw';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
-import { OSM, Vector as VectorSource } from 'ol/source';
+import { Vector as VectorSource } from 'ol/source';
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
 
 class LayerIndex extends Component {
@@ -22,20 +20,20 @@ class LayerIndex extends Component {
     // console.log(bg)
     let { map } = this.refs.map;
     let { mapkey } = window.config;
-    var TiandiMap_vec = new TileLayer({
-      name: '天地图矢量图层',
-      source: new XYZ({
-        url: 'http://t0.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=' + mapkey, //mapkey为天地图密钥
-        wrapX: false,
-      }),
-    });
-    var TiandiMap_cva = new TileLayer({
-      name: '天地图矢量注记图层',
-      source: new XYZ({
-        url: 'http://t0.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=' + mapkey, //mapkey为天地图密钥
-        wrapX: false,
-      }),
-    });
+    // var TiandiMap_vec = new TileLayer({
+    //   name: '天地图矢量图层',
+    //   source: new XYZ({
+    //     url: 'http://t0.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=' + mapkey, //mapkey为天地图密钥
+    //     wrapX: false,
+    //   }),
+    // });
+    // var TiandiMap_cva = new TileLayer({
+    //   name: '天地图矢量注记图层',
+    //   source: new XYZ({
+    //     url: 'http://t0.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=' + mapkey, //mapkey为天地图密钥
+    //     wrapX: false,
+    //   }),
+    // });
     // 加载绘制图层
     var source = new VectorSource();
     // 创建绘制图层
@@ -75,8 +73,10 @@ class LayerIndex extends Component {
     var continuePolygonMsg = '继续点击绘制多边形';
 
     var continueLineMsg = '继续点击绘制线';
+    let that = this;
 
     var pointerMoveHandler = function(evt) {
+      let { helpTooltipElement, helpTooltip } = that.state;
       if (evt.dragging) {
         return;
       }
@@ -92,17 +92,17 @@ class LayerIndex extends Component {
       }
       helpTooltipElement.innerHTML = helpMsg; //将提示信息设置到对话框中显示
       helpTooltip.setPosition(evt.coordinate); //设置帮助提示框的位置
-      // $(helpTooltipElement).removeClass('hidden');
+      //   $(helpTooltipElement).removeClass('hidden');
 
       helpTooltipElement.classList.remove('hidden'); //移除帮助提示框的隐藏样式进行显
     };
 
     // 加载数据
-    map.addLayer(TiandiMap_vec);
-    map.addLayer(TiandiMap_cva);
+    // map.addLayer(TiandiMap_vec);
+    // map.addLayer(TiandiMap_cva);
     this.setState({
-      TiandiMap_vec,
-      TiandiMap_cva,
+      //   TiandiMap_vec,
+      //   TiandiMap_cva,
       source,
       sketch,
       helpTooltipElement,
@@ -116,8 +116,10 @@ class LayerIndex extends Component {
     map.on('pointermove', pointerMoveHandler);
     //地图绑定鼠标移出事件，鼠标移出时为帮助提示框设置隐藏样式
     map.getViewport().addEventListener('mouseout', function() {
+      let { helpTooltipElement } = that.state;
       helpTooltipElement.classList.add('hidden');
     });
+    this.addInteraction();
   }
   //    测量长度输出
   formatLength = line => {
@@ -144,9 +146,9 @@ class LayerIndex extends Component {
 
   addInteraction = () => {
     // var type = (typeSelect.value == 'area' ? 'Polygon' : 'LineString');
-    var type = 'LineString';
+    var type = 'Polygon';
     let { map } = this.refs.map;
-    let { sketch, measureTooltipElement, measureTooltip } = this.state;
+    let { sketch } = this.state;
     let that = this;
     let draw = new Draw({
       source: that.state.source,
@@ -172,59 +174,65 @@ class LayerIndex extends Component {
       }),
     });
     map.addInteraction(draw);
-
     that.createMeasureTooltip();
     that.createHelpTooltip();
 
     var listener;
+    // 绑定交互绘制工具开始绘制的事件
     draw.on(
       'drawstart',
       function(evt) {
-        // set sketch
+        let { measureTooltipElement, measureTooltip } = that.state;
+        // //绘制的要素
         sketch = evt.feature;
 
-        /** @type {module:ol/coordinate~Coordinate|undefined} */
+        /*绘制的坐标*/
         var tooltipCoord = evt.coordinate;
-
+        //绑定change事件，根据绘制几何类型得到测量长度值或面积值，并将其设置到测量工具提示框中显示
         listener = sketch.getGeometry().on('change', function(evt) {
-          var geom = evt.target;
+          var geom = evt.target; //绘制几何要素
           var output;
           if (geom instanceof Polygon) {
-            output = that.formatArea(geom);
-            tooltipCoord = geom.getInteriorPoint().getCoordinates();
+            output = that.formatArea(geom); //面积值
+            tooltipCoord = geom.getInteriorPoint().getCoordinates(); //坐标
           } else if (geom instanceof LineString) {
-            output = that.formatLength(geom);
-            tooltipCoord = geom.getLastCoordinate();
+            output = that.formatLength(geom); //长度值
+            tooltipCoord = geom.getLastCoordinate(); //坐标
           }
+          //将测量值设置到测量工具提示框中显示
           measureTooltipElement.innerHTML = output;
+          //设置测量工具提示框的显示位置
           measureTooltip.setPosition(tooltipCoord);
         });
       },
-      this,
+      window,
     );
-
+    //绑定交互绘制工具结束绘制的事件
     draw.on(
       'drawend',
       function() {
+        let { measureTooltipElement, measureTooltip } = that.state;
+        //设置测量提示框的样式
         measureTooltipElement.className = 'tooltip tooltip-static';
+
         measureTooltip.setOffset([0, -7]);
-        // unset sketch
+        // //置空当前绘制的要素对象
         sketch = null;
-        // unset tooltip so that a new one can be created
+        //置空测量工具提示框对象
         measureTooltipElement = null;
+        //重新创建一个测试工具提示框显示结果
         that.createMeasureTooltip();
         unByKey(listener);
       },
-      this,
+      window,
     );
   };
 
   /**
-   * Creates a new help tooltip
+   * 创建一个新的帮助提示框
    */
   createHelpTooltip = () => {
     let { helpTooltipElement, helpTooltip } = this.state;
-    let that = this;
     let { map } = this.refs.map;
     if (helpTooltipElement) {
       helpTooltipElement.parentNode.removeChild(helpTooltipElement);
@@ -236,11 +244,15 @@ class LayerIndex extends Component {
       offset: [15, 0],
       positioning: 'center-left',
     });
+    this.setState({
+      helpTooltipElement,
+      helpTooltip,
+    });
     map.addOverlay(helpTooltip);
   };
 
   /**
-   * Creates a new measure tooltip
+   * 创建一个新的测量工具提示框
    */
   createMeasureTooltip = () => {
     let { measureTooltipElement, measureTooltip } = this.state;
@@ -254,6 +266,10 @@ class LayerIndex extends Component {
       element: measureTooltipElement,
       offset: [0, -15],
       positioning: 'bottom-center',
+    });
+    this.setState({
+      measureTooltipElement,
+      measureTooltip,
     });
     map.addOverlay(measureTooltip);
   };
