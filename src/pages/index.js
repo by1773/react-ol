@@ -20,11 +20,15 @@ module.exports = {
   routes: [
     {
       path: '/',
-      component: './main/home.js',
+      // component: './home/index.js',
+      component:'./login/index.js',
+      // component:'./mainNav/index.js',
       // redirect:"/map/map1",
+      // component: './main/home.js',
       routes: [
         // { path: '/map/map1', component: './main/index.js' },
         { path: '/', component: './main/index.js' },
+        // { path: '/', component: './login/index.js' },
         // 地图空间
         { path: '/mapControl/navControl', component: './mapControl/navControl.js' },
         { path: '/mapControl/mousePosition', component: './mapControl/mousePosition.js' },
